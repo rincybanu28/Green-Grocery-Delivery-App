@@ -3,15 +3,18 @@ The GreenGrocer Delivery Application is a comprehensive platform designed to fac
 Backend Technology :
 SpringBoot
 MySQL Database
+
 Frontend Technology :
 Angular
+
 Features :
-Product Management : Customers can browse and purchase vegetables and fruits categorized based on type, freshness, and availability. Administrators can easily manage product listings, including adding new items and updating existing ones.
 
-Supplier Management: Suppliers play a crucial role in maintaining the quality and variety of products.Administrators can easily manage suppliers, including adding new suppliers and updating existing ones
+1. Product Management : Customers can browse and purchase vegetables and fruits categorized based on type, freshness, and availability. Administrators can easily manage product listings, including adding new items and updating existing ones.
 
-Delivery Boy Management: Timely delivery is essential for customer satisfaction. Administrators can assign delivery boys to orders and also manage delivery boy details
+2. Supplier Management: Suppliers play a crucial role in maintaining the quality and variety of products.Administrators can easily manage suppliers, including adding new suppliers and updating existing ones
 
-Order Processing: Customers can place orders conveniently through the platform, specifying delivery preferences and payment methods. Administrators can efficiently process orders, track their status, and manage inventory to fulfill customer demands effectively.
+3. Delivery Boy Management: Timely delivery is essential for customer satisfaction. Administrators can assign delivery boys to orders and also manage delivery boy details
 
-Online Payment: Secure online payment integration enables customers to complete transactions seamlessly, enhancing convenience and reducing manual processing efforts.
+4. Order Processing: Customers can place orders conveniently through the platform, specifying delivery preferences and payment methods. Administrators can efficiently process orders, track their status, and manage inventory to fulfill customer demands effectively.
+
+5. Online Payment: Secure online payment integration enables customers to complete transactions seamlessly, enhancing convenience and reducing manual processing efforts.
