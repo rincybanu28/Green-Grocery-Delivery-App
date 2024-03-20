@@ -1,12 +1,8 @@
 The GreenGrocer Delivery Application is a comprehensive platform designed to facilitate the seamless purchase of fresh vegetables and fruits online. Developed using Spring Boot for the backend and Angular for the frontend, this application offers a user-friendly interface with robust features for both customers and administrators.
 
-Backend Technology :
+Backend Technology : SpringBoot and MySQL Database
 
-SpringBoot and MySQL Database
-
-Frontend Technology :
-
-Angular
+Frontend Technology : Angular
 
 Features :
 
