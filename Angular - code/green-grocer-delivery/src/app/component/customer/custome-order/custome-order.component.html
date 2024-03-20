@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    
+    
+<div class="table-container" *ngIf="orderList.length > 0">
+    <table class="order-table">
+        <thead>
+            <tr>
+                <th>History</th>
+                <th>Order Date</th>
+                <th>Total Price</th>
+                <th>Order Status</th>
+                <th>Payment Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of orderList">
+                <td>
+                    <mat-icon (click)="openHistory(order)" class="history-icon">history</mat-icon>
+                </td>
+                <td>{{ getDate(order?.orderedDate) }}</td>
+                <td>{{ order?.totalPrice }}</td>
+                <td>{{ order?.orderStatus === 'success' ? 'Order not confirmed' : order?.orderStatus }}</td>
+                <td>{{ order?.paymentStatus === 'success' ? 'Unpaid' : order?.paymentStatus }}</td>
+                <td>
+                    <div *ngIf="order?.paymentStatus !== 'PAID'">
+                        <button (click)="addPayment(order)" mat-raised-button color="primary"
+                            class="payment-button">Payment</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

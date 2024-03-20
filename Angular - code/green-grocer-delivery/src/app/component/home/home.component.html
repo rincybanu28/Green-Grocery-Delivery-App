@@ -1,0 +1,98 @@
+<!-- home content -->
+    <section class="home">
+    <div class="content">
+      <h1> <span> Fruits & Vegitables</span>
+        <br>
+        Up To <span id="span2">50%</span> Off
+      </h1>
+      <p>All of the fresh vegetables you need for a healthy and delicious new year 
+        <br>are available for delivery.
+      </p>
+      <div class="btn"><button routerLink="/customer-login">Shop Now</button></div>
+
+    </div>
+    <div class="img">
+      <img src="../../../assets/Images/fruit1.png" alt="">
+    </div>
+  </section>
+    <!-- home content -->
+
+
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+    <div class="container" id="product-cards">
+      <h1 class="text-center">Fruits & Vegitables</h1>
+  <div class="row" style="margin-top: 30px;">
+  <div class="col-md-3 py-3 py-md-0" style="margin-top: 30px;"  *ngFor="let product of productList1">
+      <div class="card" routerLink="/customer-login">
+        <!-- <img src="../../../assets/Images/apple1.png" alt=""> -->
+        <img [src]="product?.productImage" />
+        <div class="card-body">
+          <h3 class="text-center">{{product?.productName}}</h3>
+          
+          <div class="star text-center">
+              <h6><b>Available Quantity:</b> {{product?.productQuantity}} Kg</h6>
+          </div>
+          <h2>{{product?.price | currency:'INR'}}   <span><li class="fa-solid fa-cart-shopping" routerLink="/customer-login"></li></span></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+    <!-- vegitables cards -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- offer -->
+    <div class="container" id="offer">
+      <div class="row">
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Free Shipping</h3>
+          <p>On order over ₹500</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-rotate-left"></i>
+          <h3>Free Returns</h3>
+          <p>Within 30 Minutes</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-truck"></i>
+          <h3>Fast Delivery</h3>
+          <p>All over the city</p>
+        </div>
+        <div class="col-md-3 py-3 py-md-0">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <h3>Big choice</h3>
+          <p>Of products</p>
+        </div>
+      </div>
+    </div>
+    <!-- offer -->
+
+
+
+
+
+   
+
+
+
+
+
+
+   

@@ -1,0 +1,47 @@
+body {
+    background-image: url("../../../../assets/Images/bg2.jpeg");
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Opaque white background */
+    backdrop-filter: blur(5px); /* Optional: Adds a blur effect to the background */
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.btn-close:focus {
+    outline: none;
+}
+
+.btn-close:hover {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-title {
+    margin-bottom: 0;
+}

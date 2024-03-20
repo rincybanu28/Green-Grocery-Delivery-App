@@ -1,0 +1,42 @@
+
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <span><img src="../../assets/Images/fruit1.png" alt="" width="80px" height="50px"></span>
+      <a class="navbar-brand" routerLink="/" id="logo"><span id="span1">G</span>reen <span>Grocer</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span><img src="../../assets/Images/menu.png" alt="" width="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 70px;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/customer/home"  aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">    
+            <!-- routerLink="customer/cart" -->
+            <a class="nav-link" (click)="routerToLink('customer/cart')" >Cart List </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/customer/order">Order</a>
+          </li>
+         
+          
+          <!-- <button class="btn btn-outline-success" (click)="routerToLink('/customer/logout')"  type="submit" style="border-radius: 50px; font-size: 18px; width: 72px;">Log Out</button>
+       -->
+          
+        </ul>
+        <!-- <div [matMenuTriggerFor]="menu" class="user-name-item"><div>{{customerName}}&nbsp;</div><div><mat-icon>expand_more</mat-icon></div></div>    -->
+
+        <form class="d-flex" id="search">
+          
+     <h4 style="color: white;">Welcome {{customerName}} </h4>
+          <!-- <div [matMenuTriggerFor]="menu" class="user-name-item"><div>{{customerName}}&nbsp;</div><div><mat-icon>expand_more</mat-icon></div></div>   
+<mat-menu #menu="matMenu"> -->
+    <button (click)="routerToLink('/customer/logout')" style="margin: left;margin-left: 20px;" >logout</button>
+ 
+        </form>
+      </div>
+    </div>
+  </nav>
+<!-- navbar -->

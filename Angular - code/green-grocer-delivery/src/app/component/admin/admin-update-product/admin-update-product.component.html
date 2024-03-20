@@ -1,0 +1,73 @@
+<body>
+
+    <div class="container">
+        <div class="modal-header">
+            <h4 class="modal-title">Update Product Details</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="close()">&times;</button>
+        </div>
+
+        <form id="myForm">
+            <div class="inputField">
+                <div class="form-group">
+                    <label for="productName">Product Name:</label>
+                    <input type="text" class="form-control" id="productName" name="productName" [(ngModel)]="product.productName">
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Image:</label>
+                    <input type="text" class="form-control" id="productImage" name="productImage" [(ngModel)]="product.productImage">
+                </div>
+                <!-- <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select class="form-control" [(ngModel)]="product.category" name="category">
+                        <option value="" disabled>--Select Category--</option>
+                        <option *ngFor="let item of getCategoryList" [value]="item?.name">{{ item?.name }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="supplier">Supplier:</label>
+                    <select class="form-control" [(ngModel)]="selectedSupplierId" name="supplier">
+                        <option value="" disabled>--Select Supplier--</option>
+                        <option *ngFor="let supplier of suppliers" [value]="supplier.supplierId">{{ supplier.supplierName }}</option>
+                    </select>
+                </div> -->
+
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select class="form-control" [(ngModel)]="product.category" name="category">
+                        <option value="" disabled>--Select Category--</option>
+                        <option *ngFor="let category of getCategoryList" [value]="category.name">{{ category.name }}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="supplier">Supplier:</label>
+                    <select class="form-control" [(ngModel)]="selectedSupplierId" name="supplier">
+                        <option value="" disabled>--Select Supplier--</option>
+                        <option *ngFor="let supplier of suppliers" [value]="supplier.supplierId">{{ supplier.supplierName }}</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="productQuantity">Quantity in Kg:</label>
+                    <input type="number" class="form-control" id="productQuantity" name="productQuantity" [(ngModel)]="product.productQuantity">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price(Per Kg):</label>
+                    <input type="number" class="form-control" id="price" name="price" [(ngModel)]="product.price">
+                </div>
+                <div class="form-group">
+                    <label for="buyDate">Added Date:</label>
+                    <input type="date" class="form-control" id="buyDate" name="buyDate" [(ngModel)]="product.buyDate">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+                <button type="submit" class="btn btn-primary" (click)="onUpdateClick()">Update</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>

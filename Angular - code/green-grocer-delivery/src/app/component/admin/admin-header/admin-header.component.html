@@ -1,0 +1,52 @@
+
+
+<!-- navbar -->
+<nav class="navbar navbar-expand-lg" id="navbar">
+    <div class="container-fluid">
+      <span><img src="../../../assets/Images/fruit1.png" alt="" width="80px" height="50px"></span>
+      <a class="navbar-brand" routerLink="/" id="logo"><span id="span1">G</span>reen <span>Grocer</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <span><img src="../../assets/menu.png" alt="" width="30px"></span> -->
+        <span><img src="../../../assets/menu.png" alt="" width="30px"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 70px;">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="admin/supplier" > Supplier</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/product"> Products</a>
+          </li>
+         
+          <!-- <li class="nav-item">
+            <a class="nav-link">Product List</a>
+          </li> -->
+         
+          <li class="nav-item">
+            <a class="nav-link" routerLink="admin/order">Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLink="admin/deliveryboylist"> Delivery Boy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"routerLink="admin/deliverylist">View Delivery</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="admin/delivery">Delivery</a>
+          </li> -->
+          <!--         <i class="fa fa-question-circle"></i><a (click)="gotourl('aboutus')" [class.selected]="url === '/aboutus'">About-us</a> -->
+         
+        </ul>
+        <form class="d-flex" id="search">
+          <button (click)="gotourl('/admin/logout')" style="margin: left;" >logout</button>
+ 
+         <!-- <i class="fa fa-sign-out"></i><a (click)="gotourl('/admin/logout')" [class.selected]="url === '/admin/logout'">Logout</a>  -->
+          </form>
+      </div>
+    </div>
+  </nav>
+<!-- navbar -->

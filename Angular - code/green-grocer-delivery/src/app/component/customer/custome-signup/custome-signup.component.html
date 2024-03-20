@@ -1,0 +1,92 @@
+<!-- <p>user-signup works!</p> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    
+
+    <br /><br />
+<div class="register-tab">
+    <div class="main centered">
+        <h1>Register</h1>
+    </div>
+    <div class="main centered">
+
+        <table>
+            <tr>
+                <!-- <i class="fa fa-id-card"></i> -->
+                <td class="label">FirstName<span class="text-danger">*</span></td>
+                <td>
+                    <input type="text"[(ngModel)]="customerFirstName" placeholder="First Name">
+                </td>
+            </tr>
+            <tr>
+                <!-- <i class="fa fa-id-card-o"></i> -->
+                <td class="label">LastName<span class="text-danger">*</span></td>
+                <td>
+                    <input type="text" [(ngModel)]="customerLastName" placeholder="Last Name">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Email<span class="text-danger">*</span></td>
+                <td>
+                    <input type="text" [(ngModel)]="customerEmail" placeholder="Email">
+                </td>
+            </tr>
+           
+
+            <tr>
+                <td class="label">Address<span class="text-danger">*</span></td>
+                <td>
+                    <!-- <input type="text" formControlName="customerAddress" placeholder="Address"> -->
+                    <textarea type="text" [(ngModel)]="customerAddress" placeholder="Address" style="width: 190px;"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">Phone<span class="text-danger">*</span></td>
+                <td>
+                    <input type="tel" [(ngModel)]="customerPhoneNumber" placeholder="Mobile Number">
+                </td>
+            </tr>
+
+           
+
+            <tr>
+                <td class="label">PinCode<span class="text-danger">*</span></td>
+                <td>
+                    <input type="tel" [(ngModel)]="pincode"  placeholder="Pincode">
+                </td>
+            </tr>
+
+         
+            <tr>
+                <td class="label">Password<span class="text-danger">*</span></td>
+                <td>
+                    <input type="password" [(ngModel)]="customerPassword" placeholder="Password">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <!--<td class="information" style="font-size: smaller;color: white;">
+                    (Password should contains 1 Uppercase, 1 Digit and should be 8 character long)
+                </td>
+            -->
+            </tr>
+        </table>
+    </div>
+    <br />
+    <div class="centered"> <button (click)="onSubmit()" mat-raised-button color="primary" class="btn">Signup</button></div>
+
+
+
+</div>
+<br /><br />
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+
+/* home content */
+.home{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #a9a9a92b;
+    z-index: 0;
+}
+.home .img{
+    flex: 1 1 300px;
+}
+.home .img img{
+    margin-top: 30px;
+    width: 100%;
+}
+.home .content{
+    flex: 1 1 400px;
+    margin-top: 20px;
+}
+.content h1{
+    color: #0f6335;
+    font-weight: bold;
+    margin-left: 23px;
+    font-size: 55px;
+    text-shadow: -1px 1px 1px black;
+}
+.content h1 span{
+    color: #0f6335;
+    text-shadow: 1px 1px 1px black;
+}
+#span2{
+    color: #ffc800;
+}
+.content p{
+    margin-left: 23px;
+}
+.btn{
+    margin-left: 13px;
+}
+.btn button{
+    width: 150px;
+    height: 32px;
+    letter-spacing: 3px;
+    background-color: #0f6335;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color: #ffc800;
+    color: black;
+    border: none;
+}
+
+@media screen and (max-width:1200px){
+    .home{
+        height: 90vh;
+    }
+}
+@media screen and (max-width:799px){
+    .home{
+        height: 140vh;
+    }
+}
+@media screen and (max-width:550px){
+    .home{
+        height: 110vh;
+    }
+}
+@media screen and (max-width:420px){
+   .content h1{
+    font-size: 45px;
+   }
+}
+@media screen and (max-width:320px){
+   .content h1{
+    font-size: 36px;
+   }
+}
+/* home content */
+
+
+/* product cards */
+#product-cards{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#product-cards h1{
+    color: #ffc800;
+    text-shadow: 1px 1px 1px black;
+    border-bottom: 2px solid #ffc800;
+}
+#product-cards .card h3{
+    font-size: 20px;
+    color: black;
+}
+#product-cards .card p{
+    font-size: 12px;
+    margin-top: 5px;
+    color: black;
+}
+.star i{
+    margin-left: 5px;
+    font-size: 13px;
+}
+.checked{
+    color: #ffc800;
+}
+#product-cards .card h2{
+    font-size: 20px;
+    color: black;
+    margin-top: 20px;
+}
+#product-cards .card h2 span{
+    float: right;
+    color: black;
+    cursor: pointer;
+}
+@media screen and (max-width:1000px){
+    #product-cards .card h3{
+        font-size: 15px;
+    }
+}
+/* product cards */
+
+html{
+    scroll-behavior: smooth;
+}
+.arrow{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    right: 50px;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+
+
+/* offer */
+#offer{
+   margin-bottom: 70px;
+    margin-top: 100px;
+}
+#offer i{
+    font-size: 32px;
+    color: black;
+}
+/* offer */

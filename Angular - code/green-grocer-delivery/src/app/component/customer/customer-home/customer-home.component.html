@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<br /><br />
+<div class="centered toggle-group">
+  <mat-button-toggle-group [value]="searchType" (change)="getSelectedType($event)">
+    <mat-button-toggle value="bycategory" class="toggle-button">
+      <span class="toggle-label">By Category</span>
+    </mat-button-toggle>
+    <mat-button-toggle value="bysearch" class="toggle-button">
+      <span class="toggle-label">By Search</span>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+
+<br />
+<div *ngIf="searchType === 'bysearch'" class="centered">
+    Search:&nbsp;&nbsp; <input type="text" (keydown)="getSearchWord($event)" [(ngModel)]="searchKeyword" placeholder="Search Product name">
+</div>
+<br /><br />
+<div class="centered" *ngIf="searchType === 'bycategory'">
+    Select Cateogry :   <select [(ngModel)]="category" (change)="getProductByCategory()">
+        <option [value]="100">All</option>
+        <option *ngFor="let item of getCategoryList" [value]="item?.value">{{item?.name}}</option>
+    </select>
+</div>
+
+
+
+
+
+
+
+<div class="container" id="product-cards">
+    <h1 class="text-center">Fruits & Vegitables</h1>
+<div class="row" style="margin-top: 30px;">
+<div class="col-md-3 py-3 py-md-0" style="margin-top: 30px;" *ngFor="let product of productList;index as i">
+    <div class="card">
+      <!-- <img src="../../../assets/Images/apple1.png" alt=""> -->
+      <img [src]="product?.productImage" />
+      <div class="card-body">
+        <h3 class="text-center">{{product?.productName}}</h3>
+        
+        <div class="star text-center">
+            <h6><b>Available Quantity:</b> {{product?.productQuantity}} Kg</h6>
+        </div>
+        <h2>{{product?.price | currency:'INR'}}  <input class="small-text-field" type="text" [id]="product?.productId" name="addquantity" placeholder="Quantity" style="width: 120px; height: 26px;margin-left: 7px;">   <span><li class="fa-solid fa-cart-shopping" (click)="addToCart(product)"></li></span></h2>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div *ngIf="productList.length === 0" class="centered">
+    No Product avaiable
+</div>
+
+<br />
+<div *ngIf="productList.length>0" class="centered">
+    <app-paging
+        [totalbook]="totalproduct"
+        [pageSize]="pageSize"
+        [offset]="offset"
+        (onNextPageClick)="onNextPageClick($event)"
+        (onPreviousPageClick)="onPreviousPageClick($event)"
+        (onFirstPageClick)="onFirstPageClick($event)"
+        (onLastPageClick)="onLastPageClick($event)"
+    ></app-paging>
+</div>
+<br />

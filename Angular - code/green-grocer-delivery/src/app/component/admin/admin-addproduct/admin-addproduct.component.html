@@ -1,0 +1,85 @@
+<!--Modal Form-->
+<!-- <h1>working</h1> -->
+<div class="modal fade" id="adminForm" #addProductModal >
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Add Product</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form action="#" id="myForm" [formGroup]="productForm" >
+
+                    <!-- <div class="card imgholder">
+                        <label for="imgInput" class="upload">
+                            <input type="file" name="" id="imgInput">
+                            <i class="bi bi-plus-circle-dotted"></i>
+                        </label>
+                        <img src="../../../../assets/add-icon.png" alt="" width="200" height="200" class="img">
+                    </div> -->
+                    <div class="inputField">
+                        <div>
+                            <label for="name">Product Name:  <span class="text-danger">*</span></label>
+                            <input type="text" name="" id="name" placeholder="Enter Product Name" formControlName="productName">
+                            <div class="text-danger" *ngIf="productForm.get('productName')?.hasError('required') && productForm.get('productName')?.touched">
+                                name is required
+                            </div>
+                        </div>
+                        <div>
+                            <label for="name">Image:  <span class="text-danger">*</span></label>
+                            <input type="text" name="" id="image"  placeholder="Enter Image URL" formControlName="productImage">
+                            <div class="text-danger" *ngIf="productForm.get('productImage')?.hasError('required') && productForm.get('productImage')?.touched">
+                                Image is required
+                            </div>
+                        </div>
+                        <div>
+                            <label for="category">Category  <span class="text-danger">*</span></label>
+                                <select  formControlName="category">
+                                    <option value="" disabled selected>--Select Category--</option>
+                                <option *ngFor="let item of getCategoryList"  [ngValue]="item?.value">{{item?.name}}</option>
+                                </select>
+                        </div>
+
+
+
+                        <div>
+                            <label for="suppliers">Supplier  <span class="text-danger">*</span></label>
+                                <select  formControlName="supplier">
+                                    <option value="" disabled selected>--Select Supplier--</option>
+                                <option *ngFor="let supplier of suppliers" [ngValue]="supplier">{{supplier.supplierName }}</option>
+                                </select>
+                        </div>
+
+                        <div>
+                            <label for="quantity">Quantity in Kg: <span class="text-danger">*</span></label>
+                            <input type="number" name="" id="quantity" required formControlName="productQuantity">
+                            <div class="text-danger" *ngIf="productForm.get('productQuantity')?.hasError('required') && productForm.get('productQuantity')?.touched">Product Quantity is Required
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="price">Price(Per Kg): <span class="text-danger">*</span></label>
+                            <input type="number" name="" id="price" formControlName="price">
+                            <div class="text-danger" *ngIf="productForm.get('price')?.hasError('required') && productForm.get('price')?.touched">Product price is Required
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="aDate">Added Date: <span class="text-danger">*</span></label>
+                            <input type="date" name="" id="aDate"  formControlName="buyDate" >
+                            <div class="text-danger" *ngIf="productForm.get('buyDate')?.hasError('required') && productForm.get('buyDate')?.touched">Date is Required
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"  (click)="onSubmit()" >Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

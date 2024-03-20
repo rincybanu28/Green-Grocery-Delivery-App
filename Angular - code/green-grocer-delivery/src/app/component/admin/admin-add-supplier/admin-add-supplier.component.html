@@ -1,0 +1,96 @@
+<div class="modal fade" id="adminForm" #addSupplierModal >
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Fill the Form</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <form  id= "myForm" [formGroup]="supplierForm" >
+
+                    
+
+                    <div class="inputField">
+                        
+
+                        <div class="form-group">
+                            <label for="supplierName">Full Name :  <span class="text-danger">*</span></label>
+                            <input placeholder="Enter Full Name" type="text" class="form-control" id="supplierName" formControlName="supplierName">
+                            <div *ngIf="supplierForm.get('supplierName')?.hasError('required') && supplierForm.get('supplierName')?.touched"
+                                class="text-danger">
+                                First Name is required.
+                            </div>
+                            <div *ngIf="supplierForm.get('supplierName')?.hasError('maxlength')" class="text-danger">
+                                Maximum length exceeded (50 characters).
+                            </div>
+                        </div>
+    
+
+                        <div class="form-group">
+                            <label for="supplierEmail">Email :  <span class="text-danger">*</span></label>
+                            <input placeholder="Enter your Email Id" type="email" class="form-control" id="supplierEmail" formControlName="supplierEmail">
+                            <div class="text-danger"  *ngIf="supplierForm.get('supplierEmail')?.hasError('required') && supplierForm.get('supplierEmail')?.touched">
+                                Email is Required
+                            </div>
+                            <div class="text-danger"  *ngIf="supplierForm.get('supplierEmail')?.hasError('supplierEmail')">
+                                Please Enter valid email id
+                            </div>
+                        </div>
+                        
+
+                        <div class="form-group">
+                            <label for="supplierPhoneNumber">Contact :  <span class="text-danger">*</span></label>
+                            <input placeholder="Enter contact number" type="text" class="form-control" id="supplierPhoneNumber" name="supplierPhoneNumber"
+                                 required pattern="[0-9]+"  formControlName="supplierPhoneNumber">
+                            <div *ngIf="supplierForm.controls['supplierPhoneNumber'].hasError('required') && (supplierForm.controls['supplierPhoneNumber'].dirty || supplierForm.controls['supplierPhoneNumber'].touched)"
+                                class="text-danger">
+                                Contact is required.
+                            </div>
+                            <div *ngIf="supplierForm.controls['supplierPhoneNumber'].hasError('pattern')" class="text-danger">
+                                Please enter a valid contact number.
+                            </div>
+                        </div>
+                        
+
+                        <div>
+                            <label for="supplierAddress">Address:  <span class="text-danger">*</span></label>
+                            <!-- <input type="email" name="email" id="email" placeholder="Enter email" required> -->
+                            <textarea placeholder="Enter full address" name="supplierAddress" formControlName="supplierAddress"> </textarea>
+                            <div class="text-danger" *ngIf="supplierForm.get('supplierAddress')?.hasError('required') && supplierForm.get('supplierAddress')?.touched">
+                               Address is required
+                             </div>
+                        </div>
+
+                        
+
+                        <div>
+                            <label for="supplierCity">City: <span class="text-danger">*</span></label>
+                            <input type="text" name="supplierCity" id="supplierCity" placeholder="ex. Mumbai " formControlName="supplierCity">
+                            <div class="text-danger" *ngIf="supplierForm.get('supplierCity')?.hasError('required') && supplierForm.get('supplierCity')?.touched">
+                               City is required
+                            </div>
+                        </div>
+                        
+
+                        <div>
+                            <label for="supplierState">State: <span class="text-danger">*</span></label>
+                            <input type="text" name="supplierState" id="supplierState" placeholder="ex. Maharashtra " formControlName="supplierState">
+                            <div class="text-danger" *ngIf="supplierForm.get('supplierState')?.hasError('required') && supplierForm.get('supplierState')?.touched">
+                               State is required
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+              </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,111 @@
+
+ body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../../../../assets/Images/bg2.jpeg");
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ 
+ .error{
+    color: red;
+}
+
+.intro1 {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 520px;
+     background:linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5) 100%),
+    url('../../../../assets/Images/bg2.jpeg'); 
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .intro1 h1 {
+    font-family: sans-serif;
+    font-size: 40px;
+    color: #110909;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+  }
+  fieldset {
+    background-color: #eeeeee;
+  }
+  .message{
+    color: rgb(0, 81, 255);
+  }
+
+  .btn {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background: #3f8c50;
+    color: #fff;
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #08792c;
+}
+
+.form-outline input{
+
+  margin: auto;
+}
+
+.input-field {
+  width: 100%;
+  height: 50px;
+  background: #f0f0f0;
+  margin: 10px 0;
+  border: 2px solid #0f6335;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+.input-field i {
+  flex: 1;
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+}
+.input-field input {
+  flex: 5;
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+}
+#login-form{
+  background-color: #0f6335;
+  border-radius: 7%;
+
+}
+
+.login-para{
+  padding-left: 50px;
+  color: white;
+}
+.img-fluid{
+  padding-left: 70px;
+  height: 200px;
+  width: 350px;
+}

@@ -1,0 +1,44 @@
+<body>
+
+    <div class="container">
+        <div class="modal-header">
+            <h4 class="modal-title">Update Product Details</h4>
+            <button type="button" class="btn-close" aria-label="Close" (click)="close()">&times;</button>
+        </div>
+                    <form id="myForm">
+                        <div class="inputField">
+                            <div class="form-group">
+                                <label for="deliveryBoyName">Name: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="deliveryBoyName" id="deliveryBoyName" [(ngModel)]="deliveryboy.deliveryBoyName">
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryBoyEmail">Email: <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" name="deliveryBoyEmail" id="deliveryBoyEmail" [(ngModel)]="deliveryboy.deliveryBoyEmail">
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryBoyContact">Phone No: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="deliveryBoyContact" id="deliveryBoyContact" [(ngModel)]="deliveryboy.deliveyBoyContact">
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryBoyCity">City: <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="deliveryBoyCity" id="deliveryBoyCity" [(ngModel)]="deliveryboy.deliveryBoyCity">
+                            </div>
+                            <div class="form-group">
+                                <label for="deliveryBoyAddress">Address: <span class="text-danger">*</span></label>
+                                <textarea class="form-control" name="deliveryBoyAddress" id="deliveryBoyAddress" [(ngModel)]="deliveryboy.deliveryBoyAddress"></textarea>
+                            </div>
+                            
+                        </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-secondary mr-2" (click)="close()">Close</button>
+                                <button type="submit" class="btn btn-primary" (click)="onUpdateClick()">Update</button>
+                            </div>
+                        </form>
+                   
+                </div>
+            
+                <!-- Bootstrap JS (optional) -->
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            </body>

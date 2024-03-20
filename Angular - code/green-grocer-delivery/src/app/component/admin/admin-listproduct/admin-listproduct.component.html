@@ -1,0 +1,109 @@
+
+  <app-admin-addproduct (productCreated)="reloadPage()"></app-admin-addproduct>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+    <!--Bootstrap 5 icons CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+  <body>
+  
+ 
+    
+  
+    <section class="p-3">
+
+        <div class="row">
+            <div class="col-12">
+                <button class="btn btn-primary newProduct" data-bs-toggle="modal" data-bs-target="#adminForm"  (click)="openModal()">Add Product <i class="bi bi-plus-square"></i></button>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped table-hover mt-3 text-center table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th>Sr.No</th>
+                            <th>Picture</th>
+                            <th>Product Name</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Price(Per Kg)</th>
+                            <th>Supplier</th>
+                            <!-- <th>Added Date</th> -->
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor = "let prod of products">
+                            <td>{{prod.productId}}</td>
+                            <!-- <td>{{prod.productImage}}</td> -->
+                           
+                            <td> <img [src]="prod?.productImage" width="50px" height="50px"/></td>
+                            <td>{{prod.productName}}</td>
+                            <td>{{prod.category}}</td>
+                            <td>{{prod.productQuantity}} Kg</td>
+                          
+                            <td>Rs. {{prod.price}}</td>
+                            <!-- <td>{{prod.supplier}}</td> -->
+                            <td>{{ prod.supplier.supplierName }} </td>
+                            <!-- <td>{{prod.buyDate}}</td> -->
+
+                            <td>
+                               
+                             
+                                <button class="btn btn-primary" (click)="updateProduct(prod.productId)"><i class="bi bi-pencil-square"></i></button>
+                
+                                <button class="btn btn-danger" (click)="deleteProduct(prod.productId)"><i class="bi bi-trash"></i></button>
+                                            
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+
+   
+
+
+
+    
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+ 
+
+

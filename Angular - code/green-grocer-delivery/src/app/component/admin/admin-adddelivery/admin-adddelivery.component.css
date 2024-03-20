@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url("../../../../assets/Images/bg2.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-header {
+    background-color: #0f6335;
+    color: #fff;
+    text-align: center;
+  }
+
+  .btn-register {
+    background-color: #0f6335;
+    color: #fff;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }

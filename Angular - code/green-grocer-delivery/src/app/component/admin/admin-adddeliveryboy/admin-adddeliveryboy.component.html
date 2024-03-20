@@ -1,0 +1,81 @@
+
+ <!--Modal Form-->
+ <div class="modal fade" id="adminForm" #addDeliveryBoyModal >
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+
+          <div class="modal-header">
+              <h4 class="modal-title">Add Delivery Boy Details</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body">
+
+              <form id="myForm" [formGroup]="deliveryBoyForm" >
+
+                 
+
+                  <div class="inputField">
+                      <div>
+                          <label for="name">Name: <span class="text-danger">*</span></label>
+                          <input type="text" name="" id="name" placeholder="Enter full name" formControlName="deliveryBoyName">
+                          <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveryBoyName')?.hasError('required') && deliveryBoyForm.get('deliveryBoyName')?.touched">
+                              name is required
+                          </div>
+                      </div>
+                      
+                      <div>
+                          <label for="email">Email: <span class="text-danger">*</span></label>
+                          <input type="email" name="email" id="email" placeholder="Enter email" formControlName="deliveryBoyEmail">
+                          <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveryBoyEmail')?.hasError('required') && deliveryBoyForm.get('deliveryBoyEmail')?.touched">
+                              Email is required
+                          </div>
+                          <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveryBoyEmail')?.hasError('deliveryBoyEmail')">
+                              Please enter a valid email Id
+                          </div>
+                      </div>
+                      <div>
+                          <label for="phoneno">Phone No: <span class="text-danger">*</span></label>
+                          <input type="text" name="phoneno" id="phoneno" placeholder="ex. 9999999999" formControlName="deliveyBoyContact">
+                          <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveyBoyContact')?.hasError('required') && deliveryBoyForm.get('deliveyBoyContact')?.touched">
+                              Contact number is required
+                          </div>
+                          <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveyBoyContact')?.hasError('deliveyBoyContact')">
+                              Please enter a valid Mobile Number
+                          </div>
+                      </div>
+                      <div>
+                          <label for="city">City: <span class="text-danger">*</span></label>
+                          <input type="text" name="city" id="city" placeholder="ex. mumbai " formControlName="deliveryBoyCity">
+                          <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveryBoyCity')?.hasError('required') && deliveryBoyForm.get('deliveryBoyCity')?.touched">
+                             City is required
+                          </div>
+                      </div>
+                      <div>
+                          <label for="address">Address:  <span class="text-danger">*</span></label>
+                          <!-- <input type="email" name="email" id="email" placeholder="Enter email" required> -->
+                          <textarea placeholder="Enter full adrees" name="address" formControlName="deliveryBoyAddress"> </textarea>
+                          <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveryBoyAddress')?.hasError('required') && deliveryBoyForm.get('deliveryBoyAddress')?.touched">
+                             Address is required
+                           </div>
+                      </div>
+                      <div>
+                        <label for="city">Password: <span class="text-danger">*</span></label>
+                        <input type="password" name="deliveryBoyPassword" id="deliveryBoyPassword" placeholder="Password " formControlName="deliveryBoyPassword">
+                        <div class="text-danger" *ngIf="deliveryBoyForm.get('deliveryBoyPassword')?.hasError('required') && deliveryBoyForm.get('deliveryBoyPassword')?.touched">
+                           Password is required
+                        </div>
+                    </div>
+                      
+                  </div>
+
+              </form>
+          </div>
+
+          <div class="modal-footer">
+              <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+            </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+
+/* contact */
+#contact{
+    margin-top: 50px;
+}
+#contact .card{
+    height: 80px;
+    margin-top: 20px;
+    box-shadow: rgba(100, 100, 111 ,0.2) 0px 7px 29px 0px;
+}
+#contact .card i{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #0f6335;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+#contact .card h6{
+    margin-left: 10px;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #0f6335;
+}
+.messagebtn button{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    width: 200px;
+    height: 33px;
+    background: transparent;
+    border: 2px solid #0f6335;
+    font-weight: bold;
+    letter-spacing: 3px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.messagebtn button:hover{
+    background-color: #0f6335;
+    color: white;
+}
+.row ::placeholder{
+    font-weight: 700;
+}
+/* contact */

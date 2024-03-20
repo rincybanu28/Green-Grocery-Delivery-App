@@ -1,0 +1,101 @@
+<!-- <app-admin-add-supplier (supplierCreated)="onSupplierCreated($event)"></app-admin-add-supplier> -->
+<!-- <app-admin-header></app-admin-header> -->
+<app-admin-add-supplier (supplierCreated)="reloadPage()"></app-admin-add-supplier>
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+
+    <!--Bootstrap 5 icons CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <title>CRUD Operations</title>
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+  </head>
+  <body>
+ 
+    
+    
+    <section class="p-3">
+
+        <div class="row">
+            <div class="col-12">
+                <!-- <button class="btn btn-primary newProduct" data-bs-toggle="modal" data-bs-target="adminForm"  (click)="openModal()">Add supplier <i class="bi bi-plus-square"></i></button> -->
+                <button class="btn btn-primary newProduct" data-bs-toggle="modal" data-bs-target="#adminForm" mat-raised-button (click)="openModal()">Add  supplier <i class="bi bi-plus-square"></i></button>
+              </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-striped table-hover mt-3 text-center table-bordered">
+
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Supplier Name</th>
+                            <!-- <th>First Name</th>
+                            <th>Last Name</th> -->
+                            <th>Email</th>
+                            <th>Contact Numbar</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor = "let supplier of suppliers">
+                            <td>{{supplier.supplierId}}</td>
+                            <td>{{supplier.supplierName}}</td>
+                         
+                            <td>{{supplier.supplierEmail}}</td>
+                            <td>{{supplier.supplierPhoneNumber}}</td>
+                            <td>{{supplier.supplierAddress}}</td>
+                            <td>{{supplier.supplierCity}}</td>
+                            <td>{{supplier.supplierState}}</td>
+                       
+
+                            <td>
+                               
+                                <button class="btn btn-primary" (click)="updateSupplier(supplier.supplierId)" ><i class="bi bi-pencil-square"></i></button>
+                
+                                <button class="btn btn-danger" (click)="deleteSupplier(supplier.supplierId)"><i class="bi bi-trash"></i></button>
+                                            
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+
+   
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+
+   
+
+    <!-- <a href="#" class="arrow"><i><img src="./images/arrow.png" alt=""></i></a> -->
+
+
+
+
+</body>
+     
+</html>
+
+

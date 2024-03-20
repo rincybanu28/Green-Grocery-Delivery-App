@@ -1,0 +1,30 @@
+<div class="dialog-container">
+    <div class="header">
+        <mat-icon (click)="closeDialog()">close</mat-icon>
+    </div>
+
+    <div class="scroll centered">
+        <div *ngIf="product.length === 0">
+            There are no items in the Order
+        </div>
+        <div *ngIf="product.length > 0">
+            <table>
+                <tr>
+                    <!-- <th>Book Id</th> -->
+                    <th>Product Name</th>
+                    <th>Category</th>
+                    <th>Product Image</th>
+                    <th>Product MRP</th>
+                </tr>
+                <tr *ngFor="let prod of product">
+                    <!-- <td>{{prod?.productId}}</td> -->
+                    <td>{{prod?.productName}}</td>
+                    <td>{{prod?.category}}</td>
+                    <td><img [src]="prod?.productImage" /></td>
+                    <td>{{order?.totalPrice}}</td>
+                </tr>
+                <!-- <tr *ngFor="let prod of product">{{prod?.price}}</tr> -->
+            </table>
+        </div>
+    </div>
+</div>

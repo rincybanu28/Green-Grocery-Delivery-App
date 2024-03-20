@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  
+
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="mb-0">Add Delivery</h4>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="myForm" (ngSubmit)="saveDelivery()">
+          <!--  [(ngModel)]="orderId" -->
+          <div *ngIf="myForm.get('order.orderId') as orderIdControl">
+            <!-- <label for="orderId">Order Id:</label> -->
+            <input type="hidden" id="orderId"  [(ngModel)]="myForm" formControlName="order" class="form-control">
+          </div>
+          <div>
+          <!-- <input  type="text" id="orderId"    [(ngModel)]="orderId" class="form-control"> <div class="form-group"> -->
+            <label for="date">Date:</label>
+      <input type="date" formControlName="deliveryDate" class="form-control" id="deliveryDate">
+           </div>
+   
+  
+           <!-- <div class="form-group">
+            <label for="dropdown">Select Order:</label>
+            <select class="form-control" id="dropdown" formControlName="order" [(ngModel)]="orderId">
+              <option value="" disabled selected>Select an option</option>
+                                                             
+              <option *ngFor="let order of orders" [ngValue]="order">{{ order.orderId }}</option>
+            </select>
+          </div> -->
+  
+          <div class="form-group">
+            <label for="dropdown">Status:</label>
+            <select class="form-control" id="dropdown" [(ngModel)]="delivery.deliveryDate" formControlName="status">
+              <option value="" disabled selected>Select an option</option>
+              <option value="Completed">Completed</option>
+              <option value="Incompleted">Incompleted</option>
+            </select>
+         </div>
+  
+          <div class="form-group">
+            <label for="dropdown">Select Delivery Boy:</label>
+            <select class="form-control" id="dropdown" formControlName="deliveryBoy">
+              <option value="" disabled selected>Select an option</option>
+                                                                 <!-- {{cart?.book?.bookname}} -->
+              <option *ngFor="let deliveryBoy of deliveryBoys" [ngValue]="deliveryBoy">{{ deliveryBoy.deliveryBoyName }}</option>
+            </select>
+          </div>
+         
+  <!-- "let delivery of deliveryList" -->
+          
+  
+         <!-- {{ delivery.order?.orderId }} -->
+  <!--  (click)="deliverylist()" -->
+         
+          <button type="submit" class="btn btn-register btn-block">Add</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  
+    
+  
+
+    
+</body>
+</html>
